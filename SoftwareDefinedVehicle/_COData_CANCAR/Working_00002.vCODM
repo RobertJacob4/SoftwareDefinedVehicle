@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FunctionBusLibrary Version="42" FormatMajorVersion="1" FormatMinorVersion="3" FormatFeatureVersion="14">
+  <Namespaces>
+    <Namespace IsDefinedAsHidden="False" IsSystemDefined="False" Name="vissServer">
+      <DOInterfaces>
+        <DOInterface IsAbstract="False" Name="viss">
+          <AttributeValues>
+            <AttributeValue Definition="_SystemAttributes::CommunicationPattern" InitialValue="1" InitialValueType="Int32" />
+            <AttributeValue Definition="MQTTBinding::ClientId" InitialValue="vehicleVssServer" InitialValueType="String" />
+            <AttributeValue Definition="MQTTBinding::KeepAlive" InitialValue="60" InitialValueType="UInt32" />
+            <AttributeValue Definition="_SystemAttributes::Binding" InitialValue="MQTT" InitialValueType="String" />
+          </AttributeValues>
+          <MemberData>
+            <DOMemberDataHolder Name="MemberData">
+              <Data>
+                <DOIFMemberData Name="vissRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="vissResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/app1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionDownRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/gearDown" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionDownResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/gear1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionUpRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/gearUp" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionUpResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/gear2" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="ignitionRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/ignition" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="ignitionResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/ignition1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="radioRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/radio" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="radioResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/radio1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="headLightRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/headlight" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="headLightResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/headlight1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorRightRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/indicatorRight" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorRightResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/indicatorRight1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorLeftRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/indicatorLeft" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorLeftResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/indicatorLeft1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="hazardRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/hazard" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="hazardResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/hazard1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="brakeRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/brake" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="brakeResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/brake1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="pedalRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/pedal" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="pedalResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/pedal1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+              </Data>
+            </DOMemberDataHolder>
+          </MemberData>
+          <DataMembers>
+            <DOIFDataMember LocalDirection="Consumed" Name="vissRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="vissResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="gearPositionDownRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="gearPositionDownResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="gearPositionUpRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="gearPositionUpResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="ignitionRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="ignitionResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="radioRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="radioResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="headLightRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="headLightResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="indicatorRightRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="indicatorRightResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="indicatorLeftRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="indicatorLeftResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="hazardRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="hazardResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="brakeRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="brakeResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="pedalRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="pedalResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+          </DataMembers>
+        </DOInterface>
+      </DOInterfaces>
+      <DistributedObjects>
+        <DistributedObject GenerateDotNetAPI="True" Name="vehicleVssServer">
+          <DataType>
+            <ModifiedDOIF Reverse="False" IsDOReference="False" Interface="vissServer::viss" />
+          </DataType>
+          <MemberData>
+            <DOMemberDataHolder Name="MemberData" />
+          </MemberData>
+        </DistributedObject>
+      </DistributedObjects>
+    </Namespace>
+    <Namespace IsDefinedAsHidden="False" IsSystemDefined="False" Name="sdvApp">
+      <DOInterfaces>
+        <DOInterface IsAbstract="False" Name="sdvAppIf">
+          <AttributeValues>
+            <AttributeValue Definition="_SystemAttributes::CommunicationPattern" InitialValue="1" InitialValueType="Int32" />
+            <AttributeValue Definition="MQTTBinding::ClientId" InitialValue="sdvApp" InitialValueType="String" />
+            <AttributeValue Definition="_SystemAttributes::Binding" InitialValue="MQTT" InitialValueType="String" />
+          </AttributeValues>
+          <MemberData>
+            <DOMemberDataHolder Name="MemberData">
+              <Data>
+                <DOIFMemberData Name="vissRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="vissResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/app1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionUpRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/gearUp" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionUpResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/gear2" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="ignitionRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/ignition" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="ignitionResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/ignition1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="radioRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/radio" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="radioResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/radio1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="headLightRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/headlight" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="headLightResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/headlight1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorRightRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/indicatorRight" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorRightResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/indicatorRight1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorLeftRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/indicatorLeft" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="indicatorLeftResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/indicatorLeft1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="hazardRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/hazard" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="hazardResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/hazard1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="brakeRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/brake" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="brakeResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/brake1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="pedalRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/pedal" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="pedalResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/pedal1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionDownRequest">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="vehicles/VIN/WDB10202020/gearDown" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+                <DOIFMemberData Name="gearPositionDownResponse">
+                  <AttributeValues>
+                    <AttributeValue Definition="MQTTBinding::Topic" InitialValue="client/ID/gear1" InitialValueType="String" />
+                  </AttributeValues>
+                </DOIFMemberData>
+              </Data>
+            </DOMemberDataHolder>
+          </MemberData>
+          <DataMembers>
+            <DOIFDataMember Name="vissRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="vissResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="gearPositionUpRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="gearPositionUpResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="ignitionRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="ignitionResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="radioRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="radioResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="headLightRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="headLightResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="indicatorRightRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="indicatorRightResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="indicatorLeftRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="indicatorLeftResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="hazardRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="hazardResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="brakeRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="brakeResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="pedalRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="pedalResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember Name="gearPositionDownRequest">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+            <DOIFDataMember LocalDirection="Consumed" Name="gearPositionDownResponse">
+              <DataType DataType="_SystemDataTypes::UTF8String" />
+            </DOIFDataMember>
+          </DataMembers>
+        </DOInterface>
+      </DOInterfaces>
+      <DistributedObjects>
+        <DistributedObject GenerateDotNetAPI="True" Name="clientApp">
+          <DataType>
+            <ModifiedDOIF Reverse="False" IsDOReference="False" Interface="sdvApp::sdvAppIf" />
+          </DataType>
+          <MemberData>
+            <DOMemberDataHolder Name="MemberData" />
+          </MemberData>
+        </DistributedObject>
+      </DistributedObjects>
+    </Namespace>
+  </Namespaces>
+</FunctionBusLibrary>

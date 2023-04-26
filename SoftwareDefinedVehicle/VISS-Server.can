@@ -1,0 +1,205 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  long pos;
+  int gear;
+}
+
+on value_update vissServer::vehicleVssServer.vissRequest
+{
+  // come here when a new request topic value is published.
+  
+  write(" received new request: %s ", $this.impl );
+} 
+
+
+on value_update vissServer::vehicleVssServer.gearPositionUpRequest
+{
+  // come here when a new request topic value is published.
+  
+  write(" this is the gear string: %s ", $this.impl );
+  pos = mbstrstr($this.impl, "gear");
+  if(pos != -1)
+  {
+    write("VISS SERVER - REQUEST GRANTED");
+    @PowerTrain::GearUp = gear++;
+  }
+  else
+  {
+    write("VISS SERVER - REQUEST REFUSED");
+  }
+} 
+
+
+on value_update vissServer::vehicleVssServer.gearPositionDownRequest
+{
+  // come here when a new request topic value is published.
+  
+  write(" this is the gear string: %s ", $this.impl );
+  pos = mbstrstr($this.impl, "gear");
+  if(pos != -1)
+  {
+    write("String 2 is present in String 1.");
+    @PowerTrain::GearDown = gear--;
+  }
+  else
+  {
+    write("String 2 is not present in String 1.");
+  }
+} 
+
+on value_update vissServer::vehicleVssServer.ignitionRequest
+{
+  // come here when a new request topic value is published.
+  writeEx(0,1, " this is the ignition string: %s ", $this.impl );
+  pos = mbstrstr($this.impl, "ignition");
+  if(pos != -1)
+  {
+    if(@ComfortBus::GatewayStarter == 0 && @ComfortBus::GatewaySwitchIgnition == 0){
+    write("String 2 is present in String 1.");
+    @ComfortBus::GatewaySwitchIgnition = 3;
+    @ComfortBus::GatewayStarter = 1;
+    }
+    else{
+    @ComfortBus::GatewaySwitchIgnition = 0;
+    @ComfortBus::GatewayStarter = 0;
+    }
+  }
+  else
+  {
+    write("String 2 is not present in String 1.");
+  }
+} 
+
+on value_update vissServer::vehicleVssServer.brakeRequest
+{
+  
+  pos = mbstrstr($this.impl, "brake");
+  if(pos != -1)
+  {
+    if(@PowerTrain::BrakeActive == 0)
+    {
+    write("String 2 is present in String 1.");
+    @PowerTrain::BrakeActive = 1;
+    }
+    else
+    {
+      @PowerTrain::BrakeActive = 0;
+    }
+ }
+}
+
+
+on value_update vissServer::vehicleVssServer.indicatorRightRequest
+{
+  
+  pos = mbstrstr($this.impl, "indicator");
+  if(pos != -1)
+  {
+    if(@LightSystem::TurnIndicationRight == 0)
+    {
+    write("String 2 is present in String 1.");
+    @LightSystem::TurnIndicationRight = 1;
+    }
+    else
+    {
+      @LightSystem::TurnIndicationRight = 0;
+    }
+ }
+}
+
+on value_update vissServer::vehicleVssServer.indicatorLeftRequest
+{
+  
+  pos = mbstrstr($this.impl, "indicator");
+  if(pos != -1)
+  {
+    if(@LightSystem::TurnIndicationLeft == 0)
+    {
+    write("String 2 is present in String 1.");
+    @LightSystem::TurnIndicationLeft = 1;
+    }
+    else
+    {
+      @LightSystem::TurnIndicationLeft = 0;
+    }
+ }
+}
+
+
+on value_update vissServer::vehicleVssServer.hazardRequest
+{
+  
+  pos = mbstrstr($this.impl, "hazard");
+  if(pos != -1)
+  {
+    if(@LightSystem::SwitchHazard == 0)
+    {
+    write("String 2 is present in String 1.");
+    @LightSystem::SwitchHazard = 1;
+    }
+    else
+    {
+      @LightSystem::SwitchHazard = 0;
+    }
+ }
+}
+
+
+on value_update vissServer::vehicleVssServer.headLightRequest
+{
+  
+  pos = mbstrstr($this.impl, "headLight");
+  if(pos != -1)
+  {
+    if($Comfort::Console::Console_2::Light == 0)
+    {
+    write("String 2 is present in String 1.");
+    $Comfort::Console::Console_2::Light = 1;
+    }
+    else
+    {
+      $Comfort::Console::Console_2::Light = 0;
+    }
+ }
+}
+
+on value_update vissServer::vehicleVssServer.radioRequest
+{
+  
+  pos = mbstrstr($this.impl, "radio");
+  if(pos != -1)
+  {
+    if(@ComfortBus::RadioOnOff == 0)
+    {
+    write("String 2 is present in String 1.");
+    @ComfortBus::RadioOnOff = 1;
+    }
+    else
+    {
+      @ComfortBus::RadioOnOff = 0;
+    }
+ }
+}
+
+on value_update vissServer::vehicleVssServer.pedalRequest
+{
+  // come here when a new request topic value is published.
+  
+  write(" this is the gear string: %s ", $this.impl );
+  pos = mbstrstr($this.impl, "pedal");
+  if(pos != -1)
+  {
+    write("String 2 is present in String 1.");
+    @PowerTrain::PedalPosition = 50;
+  }
+  else
+  {
+    write("String 2 is not present in String 1.");
+  }
+} 
