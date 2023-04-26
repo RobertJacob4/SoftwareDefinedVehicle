@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="VSS_Panel">
+    <Object Type="Vector.CANalyzer.Panels.Design.StartStopControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="StartStopControl1" Children="Controls" ControlName="Start Stop Control 1">
+      <Property Name="Name">StartStopControl1</Property>
+      <Property Name="Size">112, 56</Property>
+      <Property Name="Location">348, 630</Property>
+      <Property Name="TabIndex">24</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 3">
+      <Property Name="Name">StaticTextControl3</Property>
+      <Property Name="Size">426, 20</Property>
+      <Property Name="Location">189, 289</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="TextAlign">TopCenter</Property>
+      <Property Name="Text">Console</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">430, 20</Property>
+      <Property Name="Location">189, 455</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="TextAlign">TopCenter</Property>
+      <Property Name="Text">VSS Payload</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text 1">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">426, 20</Property>
+      <Property Name="Location">189, 134</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="TextAlign">TopCenter</Property>
+      <Property Name="Text">Control</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.HexEditorControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="HexEditorControl1" Children="Controls" ControlName="Hex/Text Editor 1">
+      <Property Name="Name">HexEditorControl1</Property>
+      <Property Name="Size">415, 111</Property>
+      <Property Name="Location">200, 498</Property>
+      <Property Name="ColumnCount">50</Property>
+      <Property Name="ViewLayout">OnlyTextfield</Property>
+      <Property Name="SymbolDataType">String</Property>
+      <Property Name="SymbolConfiguration">8;16;VSSvars;;;JSON_String;4;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">23</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl12" Children="Controls" ControlName="Button 12">
+      <Property Name="Name">ButtonControl12</Property>
+      <Property Name="Size">91, 30</Property>
+      <Property Name="Location">463, 342</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="Text">Head Lights</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadHeadLightsBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">20</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl11" Children="Controls" ControlName="Button 11">
+      <Property Name="Name">ButtonControl11</Property>
+      <Property Name="Size">93, 30</Property>
+      <Property Name="Location">330, 341</Property>
+      <Property Name="Font">Microsoft Sans Serif, 11pt</Property>
+      <Property Name="Text">Hazard</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadSwitchHazardBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">19</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl10" Children="Controls" ControlName="Button 10">
+      <Property Name="Name">ButtonControl10</Property>
+      <Property Name="Size">114, 30</Property>
+      <Property Name="Location">416, 390</Property>
+      <Property Name="Font">Microsoft Sans Serif, 11pt</Property>
+      <Property Name="Text">Indicator L</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadIndicatorLeftBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">18</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl9" Children="Controls" ControlName="Button 9">
+      <Property Name="Name">ButtonControl9</Property>
+      <Property Name="Size">116, 30</Property>
+      <Property Name="Location">251, 390</Property>
+      <Property Name="Font">Microsoft Sans Serif, 11pt</Property>
+      <Property Name="Text">Indicator R</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadIndactorRightBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">17</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl8" Children="Controls" ControlName="Button 8">
+      <Property Name="Name">ButtonControl8</Property>
+      <Property Name="Size">86, 30</Property>
+      <Property Name="Location">207, 341</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="Text">Radio</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadRadioOnOffBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">16</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl7" Children="Controls" ControlName="Button 7">
+      <Property Name="Name">ButtonControl7</Property>
+      <Property Name="Size">91, 30</Property>
+      <Property Name="Location">463, 174</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="Text">Brake</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadBrakeActiveBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">15</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl6" Children="Controls" ControlName="Button 6">
+      <Property Name="Name">ButtonControl6</Property>
+      <Property Name="Size">91, 30</Property>
+      <Property Name="Location">330, 174</Property>
+      <Property Name="Font">Microsoft Sans Serif, 12pt</Property>
+      <Property Name="Text">Pedal</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadPedalPositionBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">14</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl5" Children="Controls" ControlName="Button 5">
+      <Property Name="Name">ButtonControl5</Property>
+      <Property Name="Size">121, 30</Property>
+      <Property Name="Location">329, 230</Property>
+      <Property Name="Font">Microsoft Sans Serif, 11pt</Property>
+      <Property Name="Text">Gear Down</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadGearDownBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">13</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl4" Children="Controls" ControlName="Button 4">
+      <Property Name="Name">ButtonControl4</Property>
+      <Property Name="Size">101, 30</Property>
+      <Property Name="Location">207, 230</Property>
+      <Property Name="Font">Microsoft Sans Serif, 11pt</Property>
+      <Property Name="Text">Gear Up</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadGearUpBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">12</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=16.4.4.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl3" Children="Controls" ControlName="ignitionButton">
+      <Property Name="Name">ButtonControl3</Property>
+      <Property Name="Size">87, 30</Property>
+      <Property Name="Location">207, 174</Property>
+      <Property Name="Font">Microsoft Sans Serif, 11pt</Property>
+      <Property Name="Text">Ignition</Property>
+      <Property Name="SymbolConfiguration">8;16;VISSvars;;;ReadIgnitionBtn;1;;;-1;;;;;;0</Property>
+      <Property Name="TabIndex">11</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">688, 1190</Property>
+    <Property Name="BackColor">154, 204, 255</Property>
+    <Property Name="ImageFileName">..\..\Downloads\phoneScreen.png</Property>
+    <Property Name="IsProportional">True</Property>
+  </Object>
+</Panel>
